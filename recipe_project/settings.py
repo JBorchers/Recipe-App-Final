@@ -28,7 +28,9 @@ SECRET_KEY = os.environ.get(
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "*"
+    "morning-mountain-07645-8bc6aa70f02b.herokuapp.com",
+    "127.0.0.1",
+    "localhost",
 ]
 
 
