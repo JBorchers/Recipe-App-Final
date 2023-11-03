@@ -27,9 +27,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "pacific-retreat-90795-95b4534c0354.herokuapp.com",
-    "127.0.0.1",
-    "localhost",
+    "*"
 ]
 
 
