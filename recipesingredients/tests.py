@@ -8,7 +8,8 @@ from recipesingredients.models import RecipeIngredient
 
 class RecipeIngredientModelTest(TestCase):
     def setUp(self):
-        self.recipe = Recipe.objects.create(name="Test Recipe", cooking_time=30)
+        self.recipe = Recipe.objects.create(
+            name="Test Recipe", cooking_time=30)
         self.ingredient = Ingredient.objects.create(name="Test Ingredient")
         self.recipe_ingredient = RecipeIngredient.objects.create(
             recipe=self.recipe, ingredient=self.ingredient
@@ -20,4 +21,5 @@ class RecipeIngredientModelTest(TestCase):
 
     def test_recipe_ingredient_attributes(self):
         self.assertEqual(self.recipe_ingredient.recipe.name, "Test Recipe")
-        self.assertEqual(self.recipe_ingredient.ingredient.name, "Test Ingredient")
+        self.assertEqual(
+            self.recipe_ingredient.ingredient.name, "Test Ingredient")

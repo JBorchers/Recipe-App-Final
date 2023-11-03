@@ -3,6 +3,7 @@ from .forms import RecipeIngredientForm
 from recipes.models import Recipe
 from .models import RecipeIngredient
 
+
 def add_ingredients(request, recipe_id):
     recipe = Recipe.objects.get(pk=recipe_id)
 
@@ -11,7 +12,8 @@ def add_ingredients(request, recipe_id):
         if form.is_valid():
             selected_ingredients = form.cleaned_data['ingredients']
             for ingredient in selected_ingredients:
-                RecipeIngredient.objects.create(recipe=recipe, ingredient=ingredient)
+                RecipeIngredient.objects.create(
+                    recipe=recipe, ingredient=ingredient)
             return redirect('recipe_detail', pk=recipe.pk)
     else:
         form = RecipeIngredientForm()

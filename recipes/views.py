@@ -112,7 +112,8 @@ class RecipesListView(LoginRequiredMixin, ListView):
             # Generate and pass the chart paths to the context
             chart_type = self.request.GET.get("chart_type")
             if chart_type:
-                chart_data = {"name": df["name"], "cooking_time": df["cooking_time"]}
+                chart_data = {"name": df["name"],
+                              "cooking_time": df["cooking_time"]}
                 if chart_type == "#1":
                     chart_data["labels"] = df["name"]
                 elif chart_type == "#2":
@@ -227,6 +228,7 @@ class RecipesDetailView(LoginRequiredMixin, DetailView):
 
 logger = logging.getLogger(__name__)
 
+
 @login_required
 def add_recipe(request):
     IngredientFormSet = formset_factory(NewIngredientForm, extra=1, max_num=5)
@@ -239,7 +241,8 @@ def add_recipe(request):
             try:
                 recipe = form.save(commit=False)
 
-                selected_ingredients_count = len(form.cleaned_data["ingredients"])
+                selected_ingredients_count = len(
+                    form.cleaned_data["ingredients"])
                 new_ingredients_count = sum(
                     1
                     for ingredient_form in formset
@@ -260,11 +263,14 @@ def add_recipe(request):
                 form.save_m2m()
 
                 for ingredient_form in formset:
-                    new_ingredient_name = ingredient_form.cleaned_data.get("new_ingredient")
+                    new_ingredient_name = ingredient_form.cleaned_data.get(
+                        "new_ingredient")
                     print(f"New Ingredient Name: {new_ingredient_name}")
                     if new_ingredient_name:
-                        ingredient, created = Ingredient.objects.get_or_create(name=new_ingredient_name)
-                        RecipeIngredient.objects.create(recipe=recipe, ingredient=ingredient)
+                        ingredient, created = Ingredient.objects.get_or_create(
+                            name=new_ingredient_name)
+                        RecipeIngredient.objects.create(
+                            recipe=recipe, ingredient=ingredient)
 
                 messages.success(request, "Recipe added successfully.")
 
@@ -275,19 +281,23 @@ def add_recipe(request):
 
             except Exception as e:
                 # Log detailed error information
-                logger.error("Error while saving recipe for user %s: %s", request.user.username, str(e))
-                messages.error(request, "Error while saving recipe. Please try again.")
+                logger.error("Error while saving recipe for user %s: %s",
+                             request.user.username, str(e))
+                messages.error(
+                    request, "Error while saving recipe. Please try again.")
 
         else:
             # Log form and formset errors for debugging
             logger.error("Form errors: %s", form.errors)
             for i, form in enumerate(formset):
                 logger.error("Formset form %d errors: %s", i + 1, form.errors)
-            messages.error(request, "Form validation failed. Please check the entered data.")
+            messages.error(
+                request, "Form validation failed. Please check the entered data.")
 
     else:
         form = RecipeForm()
-        form.fields["ingredients"].queryset = Ingredient.objects.order_by("name")
+        form.fields["ingredients"].queryset = Ingredient.objects.order_by(
+            "name")
         formset = IngredientFormSet()
 
     context = {"form": form, "formset": formset}
