@@ -13,7 +13,7 @@ class Recipe(models.Model):
         'ingredients.Ingredient', through='recipesingredients.RecipeIngredient', related_name='recipes')
     
     # Use CloudinaryField for image storage
-    pic = pic = CloudinaryField('image')
+    pic = CloudinaryField('image')
 
     def calc_difficulty(self):
         num_ingredients = self.ingredients.count()
