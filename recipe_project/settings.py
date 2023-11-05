@@ -137,9 +137,9 @@ import dj_database_url
 DATABASES['default'] = dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 
 # Cloudinary_storage
-CLOUDINARY_STORAGE = {
-    "CLOUDINARY_CLOUD_NAME": os.environ.get("CLOUD_NAME"),
-    "CLOUDINARY_API_KEY": os.environ.get("API_KEY"),
-    "CLOUDINARY_API_SECRET": os.environ.get("API_SECRET"),
+CLOUDINARY = {
+    'cloud_name': 'dkc7cndkp',
+    'api_key': '515261928716719',
+    'api_secret': 'WsTta2HOw5CrePBEXJNhXxjvwPk',
 }
 
