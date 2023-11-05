@@ -12,8 +12,13 @@ class Recipe(models.Model):
     ingredients = models.ManyToManyField(
         'ingredients.Ingredient', through='recipesingredients.RecipeIngredient', related_name='recipes')
     
-    # Use CloudinaryField for image storage
-    pic = CloudinaryField('image')
+    CLOUDINARY = {
+        'cloud_name': 'dkc7cndkp',
+        'api_key': '515261928716719',
+        'api_secret': 'WsTta2HOw5CrePBEXJNhXxjvwPk',
+    }
+    
+    pic = CloudinaryField('image', **CLOUDINARY)
 
     def calc_difficulty(self):
         num_ingredients = self.ingredients.count()
