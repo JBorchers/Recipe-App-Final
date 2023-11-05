@@ -142,3 +142,7 @@ CLOUDINARY_STORAGE = {
     "API_KEY": os.environ.get("API_KEY"),
     "API_SECRET": os.environ.get("API_SECRET"),
 }
+
+print("CLOUD_NAME:", os.environ.get("CLOUD_NAME"))
+print("API_KEY:", os.environ.get("API_KEY"))
+print("API_SECRET:", os.environ.get("API_SECRET"))
