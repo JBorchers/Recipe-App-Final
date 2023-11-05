@@ -11,6 +11,10 @@ from dotenv import load_dotenv
 import os
 
 import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+import json
 
 load_dotenv()
 
@@ -137,9 +141,7 @@ import dj_database_url
 DATABASES['default'] = dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 
 # Cloudinary_storage
-CLOUDINARY = {
-    'cloud_name': 'dkc7cndkp',
-    'api_key': '515261928716719',
-    'api_secret': 'WsTta2HOw5CrePBEXJNhXxjvwPk',
-}
+config = cloudinary.config(secure=True)
+
+print("****1. Set up and configure the SDK:****\nCredentials: ", config.cloud_name, config.api_key, "\n")
 
