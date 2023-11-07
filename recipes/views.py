@@ -96,6 +96,8 @@ class RecipesListView(LoginRequiredMixin, ListView):
         if selected_ingredient:
             queryset = queryset.filter(ingredients__id=selected_ingredient)
 
+        queryset = queryset.order_by('name')
+
         return queryset
 
     def get_context_data(self, **kwargs):
