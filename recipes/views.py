@@ -13,9 +13,7 @@ from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse, Http404
-from django.core.paginator import Paginator
 from django.forms import formset_factory
-from django.db import transaction
 
 from .models import Recipe
 from recipesingredients.models import RecipeIngredient
@@ -133,43 +131,6 @@ class RecipesListView(LoginRequiredMixin, ListView):
             ] = "There are no recipes with that combination of ingredients."
 
         return context
-
-
-@login_required
-def export_recipes_csv(request):
-    # Get the filter parameters from the request
-    recipe_name = request.GET.get("Recipe_Name")
-    ingredients = request.GET.getlist("Ingredients")
-
-    # Filter the Recipe objects based on the request parameters
-    queryset = Recipe.objects.all()
-
-    if recipe_name:
-        queryset = queryset.filter(name__icontains=recipe_name)
-
-    if ingredients:
-        for ingredient in ingredients:
-            # Check if the ingredient parameter is empty
-            if ingredient:
-                queryset = queryset.filter(ingredients__id=ingredient)
-
-    # Convert the filtered QuerySet to a list of dictionaries
-    recipe_data = list(queryset.values())
-
-    # Get the related Ingredient data for each recipe
-    for data in recipe_data:
-        recipe = Recipe.objects.get(pk=data["id"])
-        data["ingredients"] = ", ".join(
-            [ingredient.name for ingredient in recipe.ingredients.all()]
-        )
-
-    # Create the DataFrame from the list of dictionaries
-    df = pd.DataFrame.from_records(recipe_data)
-
-    response = HttpResponse(content_type="text/csv")
-    response["Content-Disposition"] = 'attachment; filename="recipes.csv"'
-    df.to_csv(path_or_buf=response, index=False)
-    return response
 
 
 @login_required
