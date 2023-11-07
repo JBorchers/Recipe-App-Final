@@ -81,41 +81,7 @@
     {% if error_message %}
     <div class="alert alert-error">{{ error_message }}</div>
     {% endif %}
-
-    <!-- Pagination -->
-    {% if is_paginated %}
-    <div class="pagination">
-      <span class="page-links">
-        {% if page_obj.has_previous %}
-        <button type="button" onclick="location.href='?page=1'">First</button>
-        <button
-          type="button"
-          onclick="location.href='?page={{ page_obj.previous_page_number }}'"
-        >
-          Previous
-        </button>
-        {% endif %} {% if page_obj.has_next %}
-        <button
-          type="button"
-          onclick="location.href='?page={{ page_obj.next_page_number }}'"
-        >
-          Next
-        </button>
-        <button
-          type="button"
-          onclick="location.href='?page={{ page_obj.paginator.num_pages }}'"
-        >
-          Last
-        </button>
-        {% endif %}
-      </span>
-    </div>
-    <div class="pagination-info">
-      <span class="page-info">
-        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-      </span>
-    </div>
-    {% endif %}
+   
 
     <style>
         body {
