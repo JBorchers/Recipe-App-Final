@@ -76,7 +76,6 @@ class RecipesListView(LoginRequiredMixin, ListView):
     model = Recipe
     template_name = "recipes/recipes_list.html"
     context_object_name = "recipes"
-    paginate_by = 12
 
     def get_queryset(self):
         queryset = super().get_queryset()
