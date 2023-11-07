@@ -225,6 +225,11 @@
 
             <div class="form-group">
                 <label for="{{ form.pic.id_for_label }}"><br>Image:</label><br>
+                {% if form.pic %}
+                    <img src="{{ form.pic.url }}" alt="Recipe Image">
+                {% else %}
+                    <img src="{% static 'no_picture.png' %}" alt="Default Recipe Image">
+                {% endif %}
                 {{ form.pic }}
             </div>
             <div class="button-container">
