@@ -31,6 +31,7 @@ class RecipeModelTestCase(TestCase):
 
 
 class RecipeSearchFormTest(TestCase):
+    
     @classmethod
     def setUpTestData(cls):
         # Create some test data for the Recipe and Ingredient models
