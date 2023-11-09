@@ -1,40 +1,32 @@
 # Recipe-App-Final
 
 homepage
-<img src="https://github.com/JBorchers/cfPython_Achievement2/tree/main/Exercise_2.8/screenshots/home_page.png" width="50%">
+![Homepage](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/home_page.png)
 
 login
-<img src="https://github.com/JBorchers/cfPython_Achievement2/tree/main/Exercise_2.8/screenshots/login.png" width="50%">
+![Login](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/login.png)
 
 list view
-<img src="https://github.com/JBorchers/cfPython_Achievement2/tree/main/Exercise_2.8/screenshots/list_view.png" width="50%">
+![List View](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/list_view.png)
 
 details
-<img src="https://github.com/JBorchers/cfPython_Achievement2/tree/main/Exercise_2.8/screenshots/detail_view1.png" width="50%">
-
-<img src="https://github.com/JBorchers/cfPython_Achievement2/tree/main/Exercise_2.8/screenshots/detail_view2.png" width="50%">
-
+![Details View 1](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/detail_view1.png)
+![Details View 2](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/detail_view2.png)
 
 add recipe
-<img src="https://github.com/JBorchers/cfPython_Achievement2/tree/main/Exercise_2.8/screenshots/add_recipe.png" width="50%">
-
+![Add Recipe](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/add_recipe.png)
 
 filter
-<img src="https://github.com/JBorchers/cfPython_Achievement2/tree/main/Exercise_2.8/screenshots/filter.png" width="50%">
+![Filter](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/filter.png)
 
 filter bar chart
-<img src="https://github.com/JBorchers/cfPython_Achievement2/tree/main/Exercise_2.8/screenshots/filter_bar_chart.png" width="50%">
+![Filter Bar Chart](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/filter_bar_chart.png)
 
 filter pie chart
-<img src="https://github.com/JBorchers/cfPython_Achievement2/tree/main/Exercise_2.8/screenshots/filter_pie_chart.png" width="50%">
+![Filter Pie Chart](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/filter_pie_chart.png)
 
 filter line chart
-<img src="https://github.com/JBorchers/cfPython_Achievement2/tree/main/Exercise_2.8/screenshots/filter_line_chart.png" width="50%">
-
+![Filter Line Chart](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/filter_line_chart.png)
 
 logout
-<img src="https://github.com/JBorchers/cfPython_Achievement2/tree/main/Exercise_2.8/screenshots/logout.png" width="50%">
-
-
-
-
+![Logout](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/logout.png)
