@@ -73,21 +73,22 @@ Once the development server is running, you can access the Recipe App and explor
    - Multiple screenshots showcase different aspects of the recipe details.
 
    ![Details View 1](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/detail_view1.png)
+   
    ![Details View 2](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/detail_view2.png)
 
-5. **Add Recipe:**
+6. **Add Recipe:**
    - Authenticated users can contribute to the app by adding a new recipe.
    - The "Add Recipe" page allows users to input recipe details.
 
    ![Add Recipe](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/add_recipe.png)
 
-6. **Filtering:**
+7. **Filtering:**
    - Utilize the filtering options to narrow down recipes based on various criteria.
    - Screenshots demonstrate the filter functionality.
 
    ![Filter](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/filter.png)
 
-7. **Filter Charts:**
+8. **Filter Charts:**
    - Visualize recipe data with interactive charts.
    - Screenshots showcase bar, pie, and line charts based on applied filters.
 
@@ -95,7 +96,7 @@ Once the development server is running, you can access the Recipe App and explor
    ![Filter Pie Chart](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/filter_pie_chart.png)
    ![Filter Line Chart](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/filter_line_chart.png)
 
-8. **Logout:**
+9. **Logout:**
    - When done, click on the "Logout" button to securely log out of the app.
 
    ![Logout](https://github.com/JBorchers/cfPython_Achievement2/raw/main/Exercise_2.8/screenshots/logout.png)
